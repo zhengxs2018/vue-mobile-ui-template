@@ -29,21 +29,4 @@ createApp(App)
   .mount('#app')
 ```
 
-### 修改 css 前缀
-
-在 `main.js` 中写入如下内容：
-
-```javascript
-import { createApp } from 'vue';
-
-import VueUI from 'vui'
-import 'vui/dist/index.css'
-
-import App from './App.vue'
-
-createApp(App)
-  .use(VueUI)
-  .mount('#app')
-```
-
 [webpack]: https://webpack.docschina.org/

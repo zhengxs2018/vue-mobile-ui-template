@@ -1,0 +1,38 @@
+.DS_Store
+
+# Vitepress
+.temp
+.cache
+
+# Editor directories and files
+.idea
+# .vscode
+.history
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# NPM
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+backup/
+dist/
+dist-docs/
+
+# Mobile demo
+docs/.vuepress/public/demo/

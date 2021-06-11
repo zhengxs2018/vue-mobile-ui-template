@@ -1,0 +1,25 @@
+{
+  "search.followSymlinks": false,
+  "search.exclude": {
+    ".history/": true,
+    "dist/": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.watcherExclude": {
+    ".history/": true
+  },
+  "cSpell.words": [
+    "autoprefixer",
+    "postbuild",
+    "prebuild"
+  ],
+  "cSpell.ignorePaths": [
+    ".vscode",
+    "dist"
+  ],
+  "cSpell.ignoreWords": ["iframe", "shortcodes", "vite", "vitejs"]
+}

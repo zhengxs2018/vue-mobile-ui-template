@@ -1,0 +1,130 @@
+@import 'sass-bem/bem';
+@import './var';
+
+@keyframes #{$md-prefix}-slide-up-enter {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-up-leave {
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-down-enter {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-down-leave {
+  to {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-left-enter {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-left-leave {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-right-enter {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-slide-right-leave {
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes #{$md-prefix}-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes #{$md-prefix}-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes #{$md-prefix}-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@include component('fade', $md-prefix) {
+  &-enter-active {
+    animation: $animation-duration-base #{$md-prefix}-fade-in both $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: $animation-duration-base #{$md-prefix}-fade-out both $animation-timing-function-leave;
+  }
+}
+
+@include component('slide-up', $md-prefix) {
+  &-enter-active {
+    animation: #{$md-prefix}-slide-up-enter $animation-duration-base both $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: #{$md-prefix}-slide-up-leave $animation-duration-base both $animation-timing-function-leave;
+  }
+}
+
+@include component('slide-down', $md-prefix) {
+  &-enter-active {
+    animation: #{$md-prefix}-slide-down-enter $animation-duration-base both $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: #{$md-prefix}-slide-down-leave $animation-duration-base both $animation-timing-function-leave;
+  }
+}
+
+@include component('slide-left', $md-prefix) {
+  &-enter-active {
+    animation: #{$md-prefix}-slide-left-enter $animation-duration-base both $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: #{$md-prefix}-slide-left-leave $animation-duration-base both $animation-timing-function-leave;
+  }
+}
+
+@include component('slide-right', $md-prefix) {
+  &-enter-active {
+    animation: #{$md-prefix}-slide-right-enter $animation-duration-base both $animation-timing-function-enter;
+  }
+
+  &-leave-active {
+    animation: #{$md-prefix}-slide-right-leave $animation-duration-base both $animation-timing-function-leave;
+  }
+}

@@ -1,0 +1,71 @@
+// css 前缀
+$md-prefix: md !default;
+
+// Color Palette
+$black: #000 !default;
+$white: #fff !default;
+$gray-1: #f7f8fa !default;
+$gray-2: #f2f3f5 !default;
+$gray-3: #ebedf0 !default;
+$gray-4: #dcdee0 !default;
+$gray-5: #c8c9cc !default;
+$gray-6: #969799 !default;
+$gray-7: #646566 !default;
+$gray-8: #323233 !default;
+$red: #ee0a24 !default;
+$blue: #1989fa !default;
+$orange: #ff976a !default;
+$orange-dark: #ed6a0c !default;
+$orange-light: #fffbe8 !default;
+$green: #07c160 !default;
+
+// Gradient Colors
+$gradient-red: linear-gradient(to right, #ff6034, #ee0a24) !default;
+$gradient-orange: linear-gradient(to right, #ffd01e, #ff8917) !default;
+
+// Component Colors
+$text-color: $gray-8 !default;
+$active-color: $gray-2 !default;
+$active-opacity: 0.7 !default;
+$disabled-opacity: 0.5 !default;
+$background-color: $gray-1 !default;
+$background-color-light: #fafafa !default;
+$text-link-color: #576b95 !default;
+
+// Padding
+$padding-base: 4px !default;
+$padding-xs: $padding-base * 2 !default;
+$padding-sm: $padding-base * 3 !default;
+$padding-md: $padding-base * 4 !default;
+$padding-lg: $padding-base * 6 !default;
+$padding-xl: $padding-base * 8 !default;
+
+// Font
+$font-size-xs: 10px !default;
+$font-size-sm: 12px !default;
+$font-size-md: 14px !default;
+$font-size-lg: 16px !default;
+$font-weight-bold: 500 !default;
+$line-height-xs: 14px !default;
+$line-height-sm: 18px !default;
+$line-height-md: 20px !default;
+$line-height-lg: 22px !default;
+$base-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+  Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB',
+  'Microsoft Yahei', sans-serif !default;
+$price-integer-font-family: Avenir-Heavy, PingFang SC, Helvetica Neue, Arial,
+  sans-serif !default;
+
+// Animation
+$animation-duration-base: 0.3s !default;
+$animation-duration-fast: 0.2s !default;
+$animation-timing-function-enter: ease-out !default;
+$animation-timing-function-leave: ease-in !default;
+
+// Border
+$border-color: $gray-3 !default;
+$border-width-base: 1px !default;
+$border-radius-sm: 2px !default;
+$border-radius-md: 4px !default;
+$border-radius-lg: 8px !default;
+$border-radius-max: 999px !default;

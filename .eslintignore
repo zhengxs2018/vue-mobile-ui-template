@@ -1,0 +1,14 @@
+.history/
+
+node_modules/
+
+.vuepress/.cache
+.vuepress/.temp
+.vuepress/public
+
+dist/
+dist-docs/
+types/
+
+jest.config.js
+jest-setup.js

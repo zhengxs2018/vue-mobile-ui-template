@@ -1,0 +1,59 @@
+@import 'sass-bem/bem';
+
+@import './var';
+@import './mixins/hairline';
+
+[class*='#{$md-prefix}-hairline'] {
+  @include after {
+    @include hairline();
+  }
+}
+
+@include component('hairline', $md-prefix) {
+  &,
+  &--top,
+  &--bottom,
+  &--left,
+  &--right,
+  &--surround,
+  &--top-bottom {
+    position: relative;
+  }
+
+  @include modifier('top') {
+    @include after {
+      border-top-width: $border-width-base;
+    }
+  }
+
+  @include modifier('left') {
+    @include after {
+      border-left-width: $border-width-base;
+    }
+  }
+
+  @include modifier('right') {
+    @include after {
+      border-right-width: $border-width-base;
+    }
+  }
+
+  @include modifier('bottom') {
+    @include after {
+      border-bottom-width: $border-width-base;
+    }
+  }
+
+  @include modifier('surround') {
+    @include after {
+      border-width: $border-width-base;
+    }
+  }
+
+  &,
+  &-unset {
+    &--top-bottom::after {
+      border-width: $border-width-base 0;
+    }
+  }
+}

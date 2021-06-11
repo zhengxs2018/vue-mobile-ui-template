@@ -1,0 +1,10 @@
+.page {
+  /* 用于放置 demo */
+  padding-right: 390px;
+}
+
+@media (max-width: 970px) {
+  .page {
+    padding-right: 0;
+  }
+}

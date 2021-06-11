@@ -1,0 +1,7 @@
+@import 'sass-bem/bem';
+@import './var';
+@import './mixins/clearfix';
+
+@include component('clearfix', $md-prefix) {
+  @include clearfix();
+}

@@ -1,0 +1,92 @@
+{
+  "name": "vui",
+  "version": "0.1.0",
+  "description": "基于 vue 开发的移动端 UI 组件库",
+  "main": "./dist/vui.cjs.js",
+  "module": "./dist/vui.es.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "run-p site:dev docs:dev",
+    "build": "run-s build:*",
+    "build:ui": "vite build",
+    "build:css": "sass --load-path=./node_modules --style=compressed --no-source-map ./src/index.scss:./dist/index.css",
+    "build:types": "tsc --build tsconfig.build.json",
+    "lint": "eslint \"**/*.{ts,js,vue}\" --fix",
+    "format": "prettier \"**/*.{scss,md}\" --write",
+    "test": "jest",
+    "cov": "jest --coverage",
+    "site:dev": "vite --config vite.config.site.ts",
+    "site:build": "vite build --config vite.config.site.ts",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "docs:generate": "npm run docs:build && npm run site:build"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "files": [
+    "src/**/*.scss",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{scss,md}": "prettier --write",
+    "*.{ts,js,vue}": "eslint --fix"
+  },
+  "dependencies": {
+    "@zhengxs/bem": "^1.1.0",
+    "lodash-es": "^4.17.21",
+    "vue": "^3.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.13.0",
+    "@types/jest": "^26.0.23",
+    "@types/lodash-es": "^4.17.4",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "@vitejs/plugin-vue-jsx": "^1.1.5",
+    "@vue/server-renderer": "^3.1.1",
+    "@vue/test-utils": "^2.0.0-rc.6",
+    "@vuepress/plugin-search": "^2.0.0-beta.17",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest-dom": "^3.9.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-tsdoc": "^0.2.14",
+    "eslint-plugin-vue": "^7.7.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.4",
+    "lint-staged": "^11.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.1",
+    "sass-bem": "^2.6.5",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.1.5",
+    "vite": "^2.3.6",
+    "vue": "^3.1.1",
+    "vue-jest": "^5.0.0-alpha.10",
+    "vue-router": "^4.0.8",
+    "vuepress": "^2.0.0-beta.16",
+    "vuepress-vite": "^2.0.0-beta.16"
+  },
+  "engines": {
+    "node": ">= 10.x"
+  },
+  "author": {
+    "name": "zhengxs",
+    "email": "zhengxs2018@foxmail.com"
+  },
+  "license": "MIT"
+}

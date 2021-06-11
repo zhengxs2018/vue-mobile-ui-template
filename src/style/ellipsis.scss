@@ -1,0 +1,18 @@
+@import 'sass-bem/bem';
+
+@import './var';
+@import './mixins/ellipsis';
+
+@include component('ellipsis', $md-prefix) {
+  @include ellipsis();
+}
+
+@include component('multi-ellipsis', $md-prefix) {
+  @include modifier('l2') {
+    @include multi-ellipsis(2);
+  }
+
+  @include modifier('l3') {
+    @include multi-ellipsis(3);
+  }
+}
